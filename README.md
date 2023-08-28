@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196671093-21ba3438-719d-4dd4-ad79-bfddd1395663.png" align="right" />
 
@@ -454,3 +455,6 @@ This project is licensed under [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0).
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196670788-1b7ff2fc-4958-4645-8254-0ea516e035bc.png" align="left" />
+=======
+# ResearchProject
+>>>>>>> 82f50c8ef3c8e8950ba21a12dbfed657b0d50bb2
