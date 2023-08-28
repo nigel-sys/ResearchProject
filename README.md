@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196671093-21ba3438-719d-4dd4-ad79-bfddd1395663.png" align="right" />
 
 # PureEdgeSim
 
 PureEdgeSim: A simulation framework for performance evaluation of cloud, edge and mist computing environments
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.com/CharafeddineMechalikh/PureEdgeSim.svg?branch=master)](https://travis-ci.com/CharafeddineMechalikh/PureEdgeSim) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7bcee5c75c3741b5923e0158c6e79b37)](https://www.codacy.com/gh/CharafeddineMechalikh/PureEdgeSim/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CharafeddineMechalikh/PureEdgeSim&amp;utm_campaign=Badge_Grade) [![Maven Central](https://img.shields.io/maven-central/v/com.mechalikh/pureedgesim.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.mechalikh%22%20AND%20a:%22pureedgesim%22) [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7bcee5c75c3741b5923e0158c6e79b37)](https://www.codacy.com/gh/CharafeddineMechalikh/PureEdgeSim/dashboard?utm_source=github.com&utm_medium=referral&utm_content=CharafeddineMechalikh/PureEdgeSim&utm_campaign=Badge_Coverage)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.com/CharafeddineMechalikh/PureEdgeSim.svg?branch=master)](https://travis-ci.com/CharafeddineMechalikh/PureEdgeSim) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7bcee5c75c3741b5923e0158c6e79b37)](https://www.codacy.com/gh/CharafeddineMechalikh/PureEdgeSim/dashboard?utm_source=github.com&utm_medium=referral&utm_content=CharafeddineMechalikh/PureEdgeSim&utm_campaign=Badge_Grade) [![Maven Central](https://img.shields.io/maven-central/v/com.mechalikh/pureedgesim.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.mechalikh%22%20AND%20a:%22pureedgesim%22) [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7bcee5c75c3741b5923e0158c6e79b37)](https://www.codacy.com/gh/CharafeddineMechalikh/PureEdgeSim/dashboard?utm_source=github.com&utm_medium=referral&utm_content=CharafeddineMechalikh/PureEdgeSim&utm_campaign=Badge_Coverage)
 
 ![image](https://user-images.githubusercontent.com/46229052/196698541-569de31b-0df8-470b-907c-02ba5eb5015f.png)
 
@@ -33,31 +31,31 @@ Bibtex:
 <details>
 <summary>"Click to expand"</summary>
 
-*   Updated the energy model with the ability to set an initial battery level for generated devices, either programmatically or via the xml file. 
+- Updated the energy model with the ability to set an initial battery level for generated devices, either programmatically or via the xml file.
 
-*   Now users can extend the simulation manager to change its behavior, and easily integrate it in the simulation.
+- Now users can extend the simulation manager to change its behavior, and easily integrate it in the simulation.
 
-*   Users can now easily integrate a custom task class.
+- Users can now easily integrate a custom task class.
 
-*   All entities are now notified at the end of the simulation through onSimulationEnd() method.
+- All entities are now notified at the end of the simulation through onSimulationEnd() method.
 
-*   Failure Model: now tasks can fail due to insufficient resources: RAM, STORAGE, CPU Cores.
+- Failure Model: now tasks can fail due to insufficient resources: RAM, STORAGE, CPU Cores.
 
-*   Disabled some unnecessary network links events/loops for better performance.
+- Disabled some unnecessary network links events/loops for better performance.
 
-*   Now tasks can be scheduled in batches instead of being scheduled all at once at the beginning of the simulation (hence, decreasing the number of events and therefore, faster simulations and less memory usage).
+- Now tasks can be scheduled in batches instead of being scheduled all at once at the beginning of the simulation (hence, decreasing the number of events and therefore, faster simulations and less memory usage).
 
-*   Removed unnecessary loops when orchestrating tasks (e.g., no need to browse through edge devices when the cloud only architecture is used, etc.) 
+- Removed unnecessary loops when orchestrating tasks (e.g., no need to browse through edge devices when the cloud only architecture is used, etc.)
 
-*   Overall version 5.1 can be 30 times faster and supports up to 8 times the number of tasks compared to previous version 5.0 (see figure below).
+- Overall version 5.1 can be 30 times faster and supports up to 8 times the number of tasks compared to previous version 5.0 (see figure below).
 
-*   Improved extensibility: Users can now easily incorporate a custom task class, custom simulation manager, as well as a custom topology creator.
+- Improved extensibility: Users can now easily incorporate a custom task class, custom simulation manager, as well as a custom topology creator.
 
-*   Now applications placement decisions are done after each failure (default behavior, can be changed by extending the DefaultSimulationManager and DefaultOrchestrator classes).
+- Now applications placement decisions are done after each failure (default behavior, can be changed by extending the DefaultSimulationManager and DefaultOrchestrator classes).
 
-*   Reduced duplication and improved code quality.
+- Reduced duplication and improved code quality.
 
-*   Other fixes..
+- Other fixes..
 
 <p align="center">
   <img  width="500" src="https://user-images.githubusercontent.com/46229052/196478109-29442658-19c1-498e-9c0e-593780e12f44.png">
@@ -119,17 +117,16 @@ intervals are, but it will also last longer. You can read more in the <a href="h
 ![image](https://user-images.githubusercontent.com/46229052/196704803-9a9f53b2-8255-4042-9c16-6c8470489791.png)
 <a id="important"></a>
 
->* <p align="justify">The development and maintenance of this project requires a considerable effort. Thus, any form of contribution is encouraged. </p>
->* <p align="justify">If you are willing to use the framework to implement your own project on top of it, creating a fork is a bad solution. You are not supposed to modify the code base to implement your project, but extend it by creating some subclasses. Unless you plan to redistribute your changes, you will end up with an incompatible and obsolete version of the framework. The project is constantly evolving and bug fixes are a priority. Your fork with personal changes will miss these updates and high performance improvements.</p>
->* <p align="justify">If you just came across this project and want to check it out later, don't forget to add a star :star: :wink:.</p>
-
+> - <p align="justify">The development and maintenance of this project requires a considerable effort. Thus, any form of contribution is encouraged. </p>
+> - <p align="justify">If you are willing to use the framework to implement your own project on top of it, creating a fork is a bad solution. You are not supposed to modify the code base to implement your project, but extend it by creating some subclasses. Unless you plan to redistribute your changes, you will end up with an incompatible and obsolete version of the framework. The project is constantly evolving and bug fixes are a priority. Your fork with personal changes will miss these updates and high performance improvements.</p>
+> - <p align="justify">If you just came across this project and want to check it out later, don't forget to add a star :star: :wink:.</p>
 
 <br></br>
 ![image](https://user-images.githubusercontent.com/46229052/196704930-a1ef92c7-b62e-42a2-8e82-b6ba8b949070.png)
 <a id="exclusive-features"></a>
 
 <p align="justify">
-PureEdgeSim offers many exclusive features: 
+PureEdgeSim offers many exclusive features:
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196670148-8f647e7f-ffe2-49ea-865b-2c37ca044cb2.png" align="right" />
 
@@ -166,10 +163,9 @@ PureEdgeSim offers many exclusive features:
 
 <p align="center">The live visualization of the simulated environement</p>
 
-### Efficiency and Scalability 
+### Efficiency and Scalability
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196665651-e27976b0-8908-4a75-ac54-dc838c7abf52.png" align="right" />
-
 
 <p align="justify">
 A system is said to be efficient when it can maintain a specified level of proficiency without utilizing an excessive amount of resources, i.e., execution time and memory. Determining the theoretical time complexity of the given simulation is not trivial because the execution time depends entirely on the user scenario (i.e., the devices and tasks count, the mobility model, the types of resources, etc.) and the number of events that occur during the simulation. Furthermore, some parameters strongly influence the number of simulations and, obviously, the number of runs also directly influences the execution time.
@@ -177,11 +173,11 @@ To demonstrate the scalability of PureEdgeSim, a few experiments were conducted 
 </p>
 <br clear="left"/>
 
->  A 10-minute simulation scenario with 10000 devices (which generated 1131000 tasks) took 58 seconds. 
+> A 10-minute simulation scenario with 10000 devices (which generated 1131000 tasks) took 58 seconds.
 >
->  A 24-hour simulation scenario with 200 devices (total of 3221280 generated tasks generated) took 51 seconds. 
+> A 24-hour simulation scenario with 200 devices (total of 3221280 generated tasks generated) took 51 seconds.
 >
->  A 60-minute scenario with 100 devices took only 1 seconds.
+> A 60-minute scenario with 100 devices took only 1 seconds.
 
 <p align="justify">
 Of course, this time is highly dependent on the complexity of the decision making algorithm itself and the number of generated events  (as more devices = more tasks = more events), which is why it took longer with 10,000 devices. That said, it is still faster than real-time and outperforms all CloudSim/ CloudSim plus based simulators that either struggle to start due to the large number of devices or run out of memory due to the large number of events generated.</p>
@@ -194,6 +190,7 @@ It is therefore easy to conclude that PureEdgeSim meets the “efficiency and sc
 ![image](https://user-images.githubusercontent.com/46229052/196690925-1088b91a-f576-42d4-86ca-0c34f4be7d40.png#gh-dark-mode-only)
 
 ![image](https://user-images.githubusercontent.com/46229052/196690607-821202ec-f8af-476c-9b2c-281525114d04.png#gh-light-mode-only)
+
 </p>
 
 <p align="center">PureEdgeSim support for large-scale scenarios</p>
@@ -223,7 +220,7 @@ Accordingly, the model must be versatile enough to support all kinds of resource
 <?xml version="1.0"?>
 <edge_devices>
 	<device> <!-- this is a smartphone, for example -->
-		<mobility>true</mobility><!-- the device is mobile or fixed --> 
+		<mobility>true</mobility><!-- the device is mobile or fixed -->
 		<connectivity>4g</connectivity><!--the connectivity type 4g, ethernet, Wi-Fi-->
 		<speed>1.4</speed><!-- the speed of the device in meters per second : 1.4m/s = 5km/h, 0 = non mobile-->
 		<minPauseDuration>100</minPauseDuration><!-- the minimum delay before moving to a new location-->
@@ -233,9 +230,9 @@ Accordingly, the model must be versatile enough to support all kinds of resource
 		<battery>true</battery> <!-- relies on battery? -->
 		<percentage>30</percentage> <!-- percentage of this device type -->
 		<batteryCapacity>18.75</batteryCapacity> <!-- battery capacity in Watt-Hour -->
-		<idleConsumption>0.078</idleConsumption><!-- idle energy consumption/ 
+		<idleConsumption>0.078</idleConsumption><!-- idle energy consumption/
 			second-->
-		<maxConsumption>3.3</maxConsumption><!-- max energy consumption/second, 
+		<maxConsumption>3.3</maxConsumption><!-- max energy consumption/second,
 			when device cpu is use at 100%-->
 		<isOrchestrator>false</isOrchestrator> <!-- whether it orchestrates tasks or not -->
 		<canGenerateTasks>true</canGenerateTasks> <!-- whether it generates data/tasks or not -->
@@ -251,7 +248,7 @@ Accordingly, the model must be versatile enough to support all kinds of resource
 						<core>8</core>
 						<mips>25000</mips>
 						<ram>4096</ram>
-						<storage>128000</storage> 
+						<storage>128000</storage>
 					</VM>
 				</VMs>
 			</host>
@@ -263,7 +260,7 @@ Accordingly, the model must be versatile enough to support all kinds of resource
 
 <p align="center">How a smartphone can be modeled in PureEdgeSim</p>
 
-### Ease of Use 
+### Ease of Use
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196668625-54203eac-5472-4c0e-ade2-39bc1e6e5d21.png" align="right" />
 
@@ -290,22 +287,22 @@ sim.setCustomMobilityModel(YourCustomMobilityModel.class);
 
 // To change the tasks orchestrator:
 sim.setCustomEdgeOrchestrator(YourCustomOrchestrator.class);
-		
+
 // To change the computing node class:
 sim.setCustomComputingNode(YourCustomComputingNode.class);
-		
+
 // To change the tasks generator:
-sim.setCustomTaskGenerator(YourCustomTaskGenerator.class); 
-		
+sim.setCustomTaskGenerator(YourCustomTaskGenerator.class);
+
 // To change the network model
-sim.setCustomNetworkModel(YourCustomNetworkModel.class); 
-		
+sim.setCustomNetworkModel(YourCustomNetworkModel.class);
+
 // To change the simulation manager
-sim.setCustomSimulationManager(YourCustomSimulationManager.class); 
+sim.setCustomSimulationManager(YourCustomSimulationManager.class);
 
 // To change the topology
-sim.setCustomTopologyCreator(YourCustomTopologyCreator.class); 
-		
+sim.setCustomTopologyCreator(YourCustomTopologyCreator.class);
+
 /* to use the default models you can simply delete or comment those lines */
 
 // Finally, you can launch the simulation
@@ -322,7 +319,7 @@ It is important to clarify that the concern of such test cases is the technical 
 In conclusion, we can say that the proposed simulator performs as intended. Every function has finished without abortions and gave the expected output; All the input files were parsed successfully, and all the personalized models were integrated and verified with the predicted results. The plotting of the simulation results gave a reasonable graphical output. In terms of intended errors, such as incorrect inputs, proper error messages were displayed, and correct information was written into the log file. Moreover, the parameters can be modified, stored, and loaded without any error.
 </p>
 
-### Reliability 
+### Reliability
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196667682-5c506d9f-0b00-455b-b9d1-196f93d7ba76.png" align="right" />
 
@@ -350,13 +347,15 @@ The simplest and recommended method to run this project is to use an IDE like Ec
 
 1. Downloading and extracting the project source code archive from the project repository : This can be done using the web browser or the command line `git clone https://github.com/CharafeddineMechalikh/PureEdgeSim.git`.
 2. <p align="justify">Importing the project to the IDE:</P>
-  - <p align="justify">In NetBeans, simply select the "Open project" option and chose the project directory.</P>
-  - <p align="justify">In Eclipse or IntelliJ IDEA, the project must be imported by selecting the location where it was extracted or cloned.</p>
+
+- <p align="justify">In NetBeans, simply select the "Open project" option and chose the project directory.</P>
+- <p align="justify">In Eclipse or IntelliJ IDEA, the project must be imported by selecting the location where it was extracted or cloned.</p>
+
 3. <p align="justify">The imported project consists of ten packages: the main application package, the above-mentioned modules, and the examples package. The main application and the modules are the simulator source code that normally should not be modified. The examples, however, are where the users can start.</p>
 4. <p align="justify">It is necessary to convert the project into a Maven project in order to download all the required libraries.</p>
 5. <p align="justify">Once all the necessary libraries are downloaded, users can start with the most basic examples by running any of the classes located in the <a href="https://github.com/CharafeddineMechalikh/PureEdgeSim/tree/master/PureEdgeSim/examples">“examples“</a> package.</p>
 6. <p align="justify">To build a new simulation scenario, the simplest way is to create another class in this package.</p>
-</p>
+   </p>
 
 <p align="center">
   <img  width="500" src="https://github.com/CharafeddineMechalikh/PureEdgeSim/blob/master/PureEdgeSim/files/importingproject.gif">
@@ -366,7 +365,8 @@ The simplest and recommended method to run this project is to use an IDE like Ec
 
 ### Adding PureEdgeSim as a Dependency
 
-It is possible to use PureEdgeSim as a dependency in a Maven project, by inserting the dependency  below into the pom.xml file:
+It is possible to use PureEdgeSim as a dependency in a Maven project, by inserting the dependency below into the pom.xml file:
+
 ```xml
 <dependency>
 	<groupId>com.mechalikh</groupId>
@@ -374,23 +374,24 @@ It is possible to use PureEdgeSim as a dependency in a Maven project, by inserti
 	<version>5.1.0</version>
 </dependency>
 ```
+
 Or on Gradle :
 
 ```groovy
 dependencies {
  implementation 'com.mechalikh:pureedgesim:5.1.0'
 }
-````
+```
 
 ### Via Command Line
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196673345-3f36346b-af6a-4925-b1af-613017521508.png" align="right" />
 
-Assuming that git  and maven  are already installed, PureEdgeSim can be run from the command line as follows:
-1. First, the project source code must be downloaded by cloning the repository via the command `git clone https://github.com/CharafeddineMechalikh/PureEdgeSim.git`.
-2. Now that the project is cloned, it can be built using Maven by executing the  `mvn clean install ` command in the directory where it was cloned.
-3. Now, the examples can be executed on Windows, Linux, or Mac operating systems, using the command  `mvn exec:java -Dexec.mainClass="package.Class_Name" `. For instance, to execute “Example1”, the command is  `mvn exec:java -Dexec.mainClass="examples.Example1" `
+Assuming that git and maven are already installed, PureEdgeSim can be run from the command line as follows:
 
+1. First, the project source code must be downloaded by cloning the repository via the command `git clone https://github.com/CharafeddineMechalikh/PureEdgeSim.git`.
+2. Now that the project is cloned, it can be built using Maven by executing the `mvn clean install ` command in the directory where it was cloned.
+3. Now, the examples can be executed on Windows, Linux, or Mac operating systems, using the command `mvn exec:java -Dexec.mainClass="package.Class_Name" `. For instance, to execute “Example1”, the command is `mvn exec:java -Dexec.mainClass="examples.Example1" `
 
 <br></br>
 ![image](https://user-images.githubusercontent.com/46229052/196705277-26862b5e-5e17-4e22-b973-d1628368b598.png)
@@ -403,48 +404,48 @@ Here are some works that are based on PureEdgeSim to give an idea about its wide
 
 ### Rienforcement and Deep Learning Scenarios
 
-1.    <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2020, April). A fuzzy decision tree based tasks orchestration algorithm for edge computing environments. In International Conference on Advanced Information Networking and Applications (pp. 193-203). Springer, Cham. <a href="https://github.com/CharafeddineMechalikh/FDT_based_workload_orchestration">The algorithm can be found here</a>.</p>
-2.    <p align="justify">Safavifar, Z., Ghanadbashi, S., & Golpayegani, F. (2021, November). Adaptive Workload Orchestration in Pure Edge Computing: A Reinforcement-Learning Model. In 2021 IEEE 33rd International Conference on Tools with Artificial Intelligence (ICTAI) (pp. 856-860). IEEE.</p>
-3.    <p align="justify">Neelakantam, G., Onthoni, D. D., & Sahoo, P. K. (2020). Reinforcement learning based passengers assistance system for crowded public transportation in fog enabled smart city. Electronics, 9(9), 1501.</p>
-4.    <p align="justify">Iftikhar, S., Golec, M., Chowdhury, D., Gill, S. S., & Uhlig, S. (2022). FogDLearner: A Deep Learning-based Cardiac Health Diagnosis Framework using Fog Computing. In Australasian Computer Science Week 2022 (pp. 136-144).</p>
+1.  <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2020, April). A fuzzy decision tree based tasks orchestration algorithm for edge computing environments. In International Conference on Advanced Information Networking and Applications (pp. 193-203). Springer, Cham. <a href="https://github.com/CharafeddineMechalikh/FDT_based_workload_orchestration">The algorithm can be found here</a>.</p>
+2.  <p align="justify">Safavifar, Z., Ghanadbashi, S., & Golpayegani, F. (2021, November). Adaptive Workload Orchestration in Pure Edge Computing: A Reinforcement-Learning Model. In 2021 IEEE 33rd International Conference on Tools with Artificial Intelligence (ICTAI) (pp. 856-860). IEEE.</p>
+3.  <p align="justify">Neelakantam, G., Onthoni, D. D., & Sahoo, P. K. (2020). Reinforcement learning based passengers assistance system for crowded public transportation in fog enabled smart city. Electronics, 9(9), 1501.</p>
+4.  <p align="justify">Iftikhar, S., Golec, M., Chowdhury, D., Gill, S. S., & Uhlig, S. (2022). FogDLearner: A Deep Learning-based Cardiac Health Diagnosis Framework using Fog Computing. In Australasian Computer Science Week 2022 (pp. 136-144).</p>
 
 ### Satellite Edge Computing
 
-5.    <p align="justify">Wei, J., Cao, S., Pan, S., Han, J., Yan, L., & Zhang, L. (2020, June). SatEdgeSim: A toolkit for modeling and simulation of performance evaluation in satellite edge computing environments. In 2020 12th International Conference on Communication Software and Networks (ICCSN) (pp. 307-313). IEEE.</p>
-6.    <p align="justify">Qin, J., Guo, X., Ma, X., Li, X., & Yang, J. (2022). Application and Performance Evaluation of Resource Pool Architecture in Satellite Edge Computing. Aerospace, 9(8), 451.</p>
+5.  <p align="justify">Wei, J., Cao, S., Pan, S., Han, J., Yan, L., & Zhang, L. (2020, June). SatEdgeSim: A toolkit for modeling and simulation of performance evaluation in satellite edge computing environments. In 2020 12th International Conference on Communication Software and Networks (ICCSN) (pp. 307-313). IEEE.</p>
+6.  <p align="justify">Qin, J., Guo, X., Ma, X., Li, X., & Yang, J. (2022). Application and Performance Evaluation of Resource Pool Architecture in Satellite Edge Computing. Aerospace, 9(8), 451.</p>
 
 ### Data Caching
 
-7.    <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2019, July). Towards a scalable and QoS-aware load balancing platform for edge computing environments. In 2019 International Conference on High Performance Computing & Simulation (HPCS) (pp. 684-691). IEEE.</p>
-8.    <p align="justify">Epifâneo, L., Correia, C., & Rodrigues, L. (2021, November). Cathode: A Consistency-Aware Data Placement Algorithm for the Edge. In 2021 IEEE 20th International Symposium on Network Computing and Applications (NCA) (pp. 1-10). IEEE.</p>
+7.  <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2019, July). Towards a scalable and QoS-aware load balancing platform for edge computing environments. In 2019 International Conference on High Performance Computing & Simulation (HPCS) (pp. 684-691). IEEE.</p>
+8.  <p align="justify">Epifâneo, L., Correia, C., & Rodrigues, L. (2021, November). Cathode: A Consistency-Aware Data Placement Algorithm for the Edge. In 2021 IEEE 20th International Symposium on Network Computing and Applications (NCA) (pp. 1-10). IEEE.</p>
 
 ### Task Scheduling and Security
 
-9.    Tiburski, R. T. (2021). Task scheduling and security for edge devices in internet of things applications.
+9.  Tiburski, R. T. (2021). Task scheduling and security for edge devices in internet of things applications.
 
 ### Self-Organized Architectures
 
-10.    <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2019, June). A scalable and adaptive tasks orchestration platform for IoT. In 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC) (pp. 1557-1563). IEEE.</p>
-11.    <p align="justify">Mordacchini, M., Ferrucci, L., Carlini, E., Kavalionak, H., Coppola, M., & Dazzi, P. (2021, September). Self-organizing Energy-Minimization Placement of QoE-Constrained Services at the Edge. In International Conference on the Economics of Grids, Clouds, Systems, and Services (pp. 133-142). Springer, Cham.</p>
+10. <p align="justify">Mechalikh, C., Taktak, H., & Moussa, F. (2019, June). A scalable and adaptive tasks orchestration platform for IoT. In 2019 15th International Wireless Communications & Mobile Computing Conference (IWCMC) (pp. 1557-1563). IEEE.</p>
+11. <p align="justify">Mordacchini, M., Ferrucci, L., Carlini, E., Kavalionak, H., Coppola, M., & Dazzi, P. (2021, September). Self-organizing Energy-Minimization Placement of QoE-Constrained Services at the Edge. In International Conference on the Economics of Grids, Clouds, Systems, and Services (pp. 133-142). Springer, Cham.</p>
 
 ### Software-Defined Networking
 
-12.    <p align="justify">Okwuibe, J., Haavisto, J., Kovacevic, I., Harjula, E., Ahmad, I., Islam, J., & Ylianttila, M. (2021). SDN-Enabled Resource Orchestration for Industrial IoT in Collaborative Edge-Cloud Networks. IEEE Access, 9, 115839-115854.</p>
+12. <p align="justify">Okwuibe, J., Haavisto, J., Kovacevic, I., Harjula, E., Ahmad, I., Islam, J., & Ylianttila, M. (2021). SDN-Enabled Resource Orchestration for Industrial IoT in Collaborative Edge-Cloud Networks. IEEE Access, 9, 115839-115854.</p>
 
 ### Latency-Aware Application Placement
 
-13.    <p align="justify">Khosroabadi, F., Fotouhi-Ghazvini, F., & Fotouhi, H. (2021). SCATTER: service placement in real-time fog-assisted IoT networks. Journal of Sensor and Actuator Networks, 10(2), 26.</p>
-14.    <p align="justify">Ferrucci, L., Mordacchini, M., Coppola, M., Carlini, E., Kavalionak, H., & Dazzi, P. (2020, June). Latency preserving self-optimizing placement at the edge. In Proceedings of the 1st Workshop on Flexible Resource and Application Management on the Edge (pp. 3-8).</p>
+13. <p align="justify">Khosroabadi, F., Fotouhi-Ghazvini, F., & Fotouhi, H. (2021). SCATTER: service placement in real-time fog-assisted IoT networks. Journal of Sensor and Actuator Networks, 10(2), 26.</p>
+14. <p align="justify">Ferrucci, L., Mordacchini, M., Coppola, M., Carlini, E., Kavalionak, H., & Dazzi, P. (2020, June). Latency preserving self-optimizing placement at the edge. In Proceedings of the 1st Workshop on Flexible Resource and Application Management on the Edge (pp. 3-8).</p>
 
 ### Energy-Aware Application Placement
 
-15.    <p align="justify">Kavalionak, H., Coppola, M., & Dazzi, P. Self-organizing Energy-Minimization Placement of QoE-Constrained Services at the Edge. In Economics of Grids, Clouds, Systems, and Services: 18th International Conference, GECON 2021, Virtual Event, September 21–23, 2021, Proceedings (p. 133). Springer Nature.</p>
-16.    <p align="justify">Mordacchini, M., Ferrucci, L., Carlini, E., Kavalionak, H., Coppola, M., & Dazzi, P. (2022). Energy and QoE aware Placement of Applications and Data at the Edge.</p>
+15. <p align="justify">Kavalionak, H., Coppola, M., & Dazzi, P. Self-organizing Energy-Minimization Placement of QoE-Constrained Services at the Edge. In Economics of Grids, Clouds, Systems, and Services: 18th International Conference, GECON 2021, Virtual Event, September 21–23, 2021, Proceedings (p. 133). Springer Nature.</p>
+16. <p align="justify">Mordacchini, M., Ferrucci, L., Carlini, E., Kavalionak, H., Coppola, M., & Dazzi, P. (2022). Energy and QoE aware Placement of Applications and Data at the Edge.</p>
 
 ### Other Use Cases
 
-17.    <p align="justify">Kaneko, Y., Yokoyama, Y., Monma, N., Terashima, Y., Teramoto, K., Kishimoto, T., & Saito, T. (2020, September). A Microservice-Based Industrial Control System Architecture Using Cloud and MEC. In International Conference on Edge Computing (pp. 18-32). Springer, Cham.</p>
-18.    <p align="justify">Javaid, H., Saleem, S., Wajid, B., & Khan, U. G. (2021, May). Diagnose a Disease: A Fog Assisted Disease Diagnosis Framework with Bidirectional LSTM. In 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2) (pp. 1-6). IEEE.</p>
+17. <p align="justify">Kaneko, Y., Yokoyama, Y., Monma, N., Terashima, Y., Teramoto, K., Kishimoto, T., & Saito, T. (2020, September). A Microservice-Based Industrial Control System Architecture Using Cloud and MEC. In International Conference on Edge Computing (pp. 18-32). Springer, Cham.</p>
+18. <p align="justify">Javaid, H., Saleem, S., Wajid, B., & Khan, U. G. (2021, May). Diagnose a Disease: A Fog Assisted Disease Diagnosis Framework with Bidirectional LSTM. In 2021 International Conference on Digital Futures and Transformative Technologies (ICoDT2) (pp. 1-6). IEEE.</p>
 
 <br></br>
 ![image](https://user-images.githubusercontent.com/46229052/196705340-8324e7b4-6b71-40e5-86b9-6cc148a17bc1.png)
@@ -455,6 +456,3 @@ This project is licensed under [GNU GPLv3](http://www.gnu.org/licenses/gpl-3.0).
 <p align="right"><a href="#top">:arrow_up:</a></p>
 
 <img width= "20%" src="https://user-images.githubusercontent.com/46229052/196670788-1b7ff2fc-4958-4645-8254-0ea516e035bc.png" align="left" />
-=======
-# ResearchProject
->>>>>>> 82f50c8ef3c8e8950ba21a12dbfed657b0d50bb2
